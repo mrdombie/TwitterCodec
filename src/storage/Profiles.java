@@ -6,19 +6,17 @@ import java.sql.Statement;
 
 public class Profiles extends DBHelper {
 	
-	private static final String PROFILEINSERTSQL ="INSERT INTO TWEETS(PROFILE_ID, DESCRIPTION) VALUES (?,?)";
+	private static final String PROFILEINSERTSQL ="INSERT INTO PROFILES(NAME) VALUES (?)";
 	private Statement stmt = null;
 
-	public void createProfiles() throws SQLException, ClassNotFoundException {
+	public void addProfiles() throws SQLException, ClassNotFoundException {
 
 		getConnection();
 
 		stmt = c.createStatement();
 
 		PreparedStatement statement = c.prepareStatement(PROFILEINSERTSQL);
-		statement.setInt(1, 0);
-		statement.setString(2, "DESCRIPTION");
-	
+		statement.setString(1, "PROFILE ONE");
 		statement.executeUpdate();
 		
 		c.commit();
