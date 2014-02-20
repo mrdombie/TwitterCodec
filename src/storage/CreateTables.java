@@ -50,7 +50,7 @@ public class CreateTables {
 		} catch (Exception e) {
 			LOGGER.warning(e.getClass().getName() + ": " + e.getMessage());
 		}
-		
+			
 		LOGGER.info("TABLE CREATE");
 	}
 	

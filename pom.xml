@@ -53,6 +53,13 @@
 		</dependency>
 
 		<dependency>
+			<groupId>edu.stanford.nlp</groupId>
+			<artifactId>stanford-corenlp</artifactId>
+			<version>3.3.0</version>
+			<classifier>models</classifier>
+		</dependency>
+
+		<dependency>
 			<groupId>org.codeswarm</groupId>
 			<artifactId>lipsum</artifactId>
 			<version>1.0</version>

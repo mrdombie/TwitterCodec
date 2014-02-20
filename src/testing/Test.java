@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 import storage.Profiles;
-import storage.TweetStorage;
+import storage.Tweets;
 import twitter4j.TwitterException;
 
 public class Test {
@@ -13,14 +13,14 @@ public class Test {
 			IOException, InterruptedException, SQLException,
 			ClassNotFoundException {
 
-		//testAddTweets();
+		testAddTweets();
 		testAddProfiles();
 
 	}
 
 	private static void testAddTweets() throws TwitterException,
 			InterruptedException, SQLException, ClassNotFoundException {
-		TweetStorage ts = new TweetStorage();
+		Tweets ts = new Tweets();
 		ts.addTweets("money");
 	}
 

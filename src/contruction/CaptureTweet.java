@@ -18,7 +18,7 @@ import twitter4j.TwitterStreamFactory;
 
 public class CaptureTweet {
 	
-    private static final int TOTAL_TWEETS = 10;
+    private static final int TOTAL_TWEETS = 1;
 
     public List<Status> getTweetsByTopic(String topic) throws TwitterException, InterruptedException {
        

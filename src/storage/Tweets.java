@@ -13,7 +13,7 @@ import contruction.CaptureTweet;
 import twitter4j.Status;
 import twitter4j.TwitterException;
 
-public class TweetStorage extends DBHelper {
+public class Tweets extends DBHelper {
 	
 	private final static Logger LOGGER = Logger.getLogger(CreateTables.class
 			.getName());
