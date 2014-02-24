@@ -6,94 +6,124 @@
       <sentence id="1">
         <tokens>
           <token id="1">
-            <word>RT</word>
+            <word>#Ukraine</word>
             <CharacterOffsetBegin>0</CharacterOffsetBegin>
-            <CharacterOffsetEnd>2</CharacterOffsetEnd>
-            <POS>NN</POS>
+            <CharacterOffsetEnd>8</CharacterOffsetEnd>
+            <POS>NNP</POS>
           </token>
           <token id="2">
-            <word>@EmploymentLS</word>
-            <CharacterOffsetBegin>3</CharacterOffsetBegin>
-            <CharacterOffsetEnd>16</CharacterOffsetEnd>
-            <POS>NN</POS>
-          </token>
-          <token id="3">
             <word>:</word>
-            <CharacterOffsetBegin>16</CharacterOffsetBegin>
-            <CharacterOffsetEnd>17</CharacterOffsetEnd>
+            <CharacterOffsetBegin>8</CharacterOffsetBegin>
+            <CharacterOffsetEnd>9</CharacterOffsetEnd>
             <POS>:</POS>
           </token>
+          <token id="3">
+            <word>Interim</word>
+            <CharacterOffsetBegin>10</CharacterOffsetBegin>
+            <CharacterOffsetEnd>17</CharacterOffsetEnd>
+            <POS>NNP</POS>
+          </token>
           <token id="4">
-            <word>One</word>
+            <word>leader</word>
             <CharacterOffsetBegin>18</CharacterOffsetBegin>
-            <CharacterOffsetEnd>21</CharacterOffsetEnd>
-            <POS>CD</POS>
+            <CharacterOffsetEnd>24</CharacterOffsetEnd>
+            <POS>NN</POS>
           </token>
           <token id="5">
-            <word>in</word>
-            <CharacterOffsetBegin>22</CharacterOffsetBegin>
-            <CharacterOffsetEnd>24</CharacterOffsetEnd>
-            <POS>IN</POS>
+            <word>Turchynov</word>
+            <CharacterOffsetBegin>25</CharacterOffsetBegin>
+            <CharacterOffsetEnd>34</CharacterOffsetEnd>
+            <POS>NNP</POS>
           </token>
           <token id="6">
-            <word>seven</word>
-            <CharacterOffsetBegin>25</CharacterOffsetBegin>
-            <CharacterOffsetEnd>30</CharacterOffsetEnd>
-            <POS>CD</POS>
-          </token>
-          <token id="7">
-            <word>now</word>
-            <CharacterOffsetBegin>31</CharacterOffsetBegin>
-            <CharacterOffsetEnd>34</CharacterOffsetEnd>
-            <POS>RB</POS>
-          </token>
-          <token id="8">
-            <word>self</word>
+            <word>stresses</word>
             <CharacterOffsetBegin>35</CharacterOffsetBegin>
-            <CharacterOffsetEnd>39</CharacterOffsetEnd>
-            <POS>NN</POS>
-          </token>
-          <token id="9">
-            <word>employed</word>
-            <CharacterOffsetBegin>40</CharacterOffsetBegin>
-            <CharacterOffsetEnd>48</CharacterOffsetEnd>
-            <POS>VBN</POS>
-          </token>
-          <token id="10">
-            <word>http://t.co/rDTvFLRpDF</word>
-            <CharacterOffsetBegin>50</CharacterOffsetBegin>
-            <CharacterOffsetEnd>72</CharacterOffsetEnd>
-            <POS>NN</POS>
-          </token>
-          <token id="11">
-            <word>#hrdata</word>
-            <CharacterOffsetBegin>73</CharacterOffsetBegin>
-            <CharacterOffsetEnd>80</CharacterOffsetEnd>
-            <POS>NN</POS>
-          </token>
-          <token id="12">
-            <word>#peakjobs</word>
-            <CharacterOffsetBegin>81</CharacterOffsetBegin>
-            <CharacterOffsetEnd>90</CharacterOffsetEnd>
-            <POS>NNS</POS>
-          </token>
-          <token id="13">
-            <word>#jobs</word>
-            <CharacterOffsetBegin>91</CharacterOffsetBegin>
-            <CharacterOffsetEnd>96</CharacterOffsetEnd>
+            <CharacterOffsetEnd>43</CharacterOffsetEnd>
             <POS>VBZ</POS>
           </token>
-          <token id="14">
-            <word>#economy</word>
-            <CharacterOffsetBegin>97</CharacterOffsetBegin>
-            <CharacterOffsetEnd>105</CharacterOffsetEnd>
+          <token id="7">
+            <word>``</word>
+            <CharacterOffsetBegin>44</CharacterOffsetBegin>
+            <CharacterOffsetEnd>50</CharacterOffsetEnd>
+            <POS>``</POS>
+          </token>
+          <token id="8">
+            <word>European</word>
+            <CharacterOffsetBegin>50</CharacterOffsetBegin>
+            <CharacterOffsetEnd>58</CharacterOffsetEnd>
             <POS>JJ</POS>
           </token>
-          <token id="15">
-            <word>#unemployment</word>
-            <CharacterOffsetBegin>106</CharacterOffsetBegin>
-            <CharacterOffsetEnd>119</CharacterOffsetEnd>
+          <token id="9">
+            <word>choice</word>
+            <CharacterOffsetBegin>59</CharacterOffsetBegin>
+            <CharacterOffsetEnd>65</CharacterOffsetEnd>
             <POS>NN</POS>
+          </token>
+          <token id="10">
+            <word>''</word>
+            <CharacterOffsetBegin>65</CharacterOffsetBegin>
+            <CharacterOffsetEnd>71</CharacterOffsetEnd>
+            <POS>''</POS>
+          </token>
+          <token id="11">
+            <word>-</word>
+            <CharacterOffsetBegin>72</CharacterOffsetBegin>
+            <CharacterOffsetEnd>73</CharacterOffsetEnd>
+            <POS>:</POS>
+          </token>
+          <token id="12">
+            <word>23</word>
+            <CharacterOffsetBegin>75</CharacterOffsetBegin>
+            <CharacterOffsetEnd>77</CharacterOffsetEnd>
+            <POS>CD</POS>
+          </token>
+          <token id="13">
+            <word>February</word>
+            <CharacterOffsetBegin>78</CharacterOffsetBegin>
+            <CharacterOffsetEnd>86</CharacterOffsetEnd>
+            <POS>NNP</POS>
+          </token>
+          <token id="14">
+            <word>2014</word>
+            <CharacterOffsetBegin>87</CharacterOffsetBegin>
+            <CharacterOffsetEnd>91</CharacterOffsetEnd>
+            <POS>CD</POS>
+          </token>
+          <token id="15">
+            <word>Last</word>
+            <CharacterOffsetBegin>92</CharacterOffsetBegin>
+            <CharacterOffsetEnd>96</CharacterOffsetEnd>
+            <POS>JJ</POS>
+          </token>
+          <token id="16">
+            <word>updated</word>
+            <CharacterOffsetBegin>97</CharacterOffsetBegin>
+            <CharacterOffsetEnd>104</CharacterOffsetEnd>
+            <POS>VBN</POS>
+          </token>
+          <token id="17">
+            <word>at</word>
+            <CharacterOffsetBegin>105</CharacterOffsetBegin>
+            <CharacterOffsetEnd>107</CharacterOffsetEnd>
+            <POS>IN</POS>
+          </token>
+          <token id="18">
+            <word>17:50</word>
+            <CharacterOffsetBegin>108</CharacterOffsetBegin>
+            <CharacterOffsetEnd>113</CharacterOffsetEnd>
+            <POS>CD</POS>
+          </token>
+          <token id="19">
+            <word>...</word>
+            <CharacterOffsetBegin>113</CharacterOffsetBegin>
+            <CharacterOffsetEnd>116</CharacterOffsetEnd>
+            <POS>:</POS>
+          </token>
+          <token id="20">
+            <word>http://t.co/ldWDAygats</word>
+            <CharacterOffsetBegin>117</CharacterOffsetBegin>
+            <CharacterOffsetEnd>139</CharacterOffsetEnd>
+            <POS>NNS</POS>
           </token>
         </tokens>
       </sentence>

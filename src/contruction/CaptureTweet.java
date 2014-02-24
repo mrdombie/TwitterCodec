@@ -5,7 +5,9 @@ import java.util.List;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
+import storage.CreateTables;
 import twitter4j.FilterQuery;
 import twitter4j.StallWarning;
 import twitter4j.Status;
@@ -17,6 +19,9 @@ import twitter4j.TwitterStreamFactory;
 
 
 public class CaptureTweet {
+	
+	private final static Logger LOGGER = Logger.getLogger(CaptureTweet.class
+			.getName());
 	
     private static final int TOTAL_TWEETS = 1;
 
@@ -81,7 +86,8 @@ public class CaptureTweet {
             if (status == null) {
                 continue;
             }
-            
+           
+            LOGGER.info("TWEET: " + status.getText());
             collected.add(status);
         }
         
