@@ -4,14 +4,14 @@ import java.io.IOException;
 
 import org.junit.Test;
 
-import templates.TweetSchemaProcessor;
+import templates.TweetTemplateProcessor;
 
 public class TestTemplateParsing {
 
 	@Test
 	public void testTemplateIsStored() throws IOException {
 
-		TweetSchemaProcessor tsp = new TweetSchemaProcessor();
+		TweetTemplateProcessor tsp = new TweetTemplateProcessor();
 		tsp.getTemplates();
 		
 	}

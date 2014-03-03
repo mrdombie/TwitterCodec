@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.w3c.dom.Document;
@@ -17,7 +15,6 @@ import twitter4j.Status;
 import twitter4j.TwitterException;
 import utils.TweetToXML;
 import contruction.CaptureTweet;
-import entities.TweetSchemaTags;
 
 public class TweetTemplate {
 	

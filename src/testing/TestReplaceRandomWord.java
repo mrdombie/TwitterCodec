@@ -7,14 +7,14 @@ import lexiconUtils.WordTools;
 
 import org.junit.Test;
 
-import templates.TweetSchemaProcessor;
+import templates.TweetTemplateProcessor;
 
 public class TestReplaceRandomWord {
 
 	@Test
 	public void replaceWordTest() throws IOException{
 		
-		TweetSchemaProcessor tsp = new TweetSchemaProcessor();
+		TweetTemplateProcessor tsp = new TweetTemplateProcessor();
 		WordTools select = new WordTools();
 		List<String> templates = tsp.getTemplates();
 		System.out.println(tsp.replaceWithRandomNoun(templates.get(1)));
@@ -22,9 +22,19 @@ public class TestReplaceRandomWord {
 	
 	@Test
 	public void replaceSingleWordTest() throws IOException{
-		TweetSchemaProcessor proc = new TweetSchemaProcessor();
+		
+		TweetTemplateProcessor proc = new TweetTemplateProcessor();
 		System.out.println(proc.replaceWithRandomNoun("[NOUN]"));
 		
+	}
+	
+	@Test
+	public void replaceWordAdvanced() throws IOException{
+		
+		TweetTemplateProcessor tsp = new TweetTemplateProcessor();
+		WordTools select = new WordTools();
+		List<String> templates = tsp.getTemplates();
+		System.out.println(tsp.replaceWithRandomNoun((templates.get(1))));
 	}
 	
 }
