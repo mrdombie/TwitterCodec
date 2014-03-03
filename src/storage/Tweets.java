@@ -29,7 +29,7 @@ public class Tweets extends DBHelper {
 		getConnection();
 		
 		CaptureTweet tweets = new CaptureTweet();
-		status = tweets.getTweetsByTopic(topic);
+		status = tweets.getTweetsByTopic(topic, 5);
 		c.setAutoCommit(false);
 
 		for (Status statuss : status) {

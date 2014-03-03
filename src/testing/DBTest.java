@@ -3,11 +3,12 @@ package testing;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import lexiconUtils.WordTools;
 import storage.Profiles;
 import storage.Tweets;
 import twitter4j.TwitterException;
 
-public class Test {
+public class DBTest {
 
 	public static void main(String[] args) throws TwitterException,
 			IOException, InterruptedException, SQLException,
@@ -15,7 +16,7 @@ public class Test {
 
 		testAddTweets();
 		testAddProfiles();
-
+		
 	}
 
 	private static void testAddTweets() throws TwitterException,
@@ -31,5 +32,4 @@ public class Test {
 		profiles.addProfiles();
 	
 	}
-
 }

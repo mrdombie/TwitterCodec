@@ -23,9 +23,9 @@ public class CaptureTweet {
 	private final static Logger LOGGER = Logger.getLogger(CaptureTweet.class
 			.getName());
 	
-    private static final int TOTAL_TWEETS = 1;
+    private static final int TOTAL_TWEETS = 5;
 
-    public List<Status> getTweetsByTopic(String topic) throws TwitterException, InterruptedException {
+    public List<Status> getTweetsByTopic(String topic, int numberOfTweets) throws TwitterException, InterruptedException {
        
         // TODO: You may have to tweak the capacity of the queue, depends on the filter query
     	final TwitterStream twitterStream = new TwitterStreamFactory().getInstance();
@@ -77,9 +77,9 @@ public class CaptureTweet {
         twitterStream.addListener(listener);
         twitterStream.filter(fq);
         
-        final List<Status> collected = new ArrayList<Status>(TOTAL_TWEETS);
+        final List<Status> collected = new ArrayList<Status>(numberOfTweets);
            
-        while (collected.size() < TOTAL_TWEETS) {
+        while (collected.size() < numberOfTweets) {
             // TODO: Handle InterruptedException
             final Status status = statuses.poll(10, TimeUnit.SECONDS); 
            
