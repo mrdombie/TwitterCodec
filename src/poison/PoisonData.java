@@ -37,8 +37,6 @@ public class PoisonData {
 				flag = setFlag(poisonString);
 			}
 
-			System.out.println(flag + poisonString);
-
 			if (flag.equals("NAME")) {
 				names.add(poisonString);
 			} else if (flag.equals("LOCATIONS")) {
