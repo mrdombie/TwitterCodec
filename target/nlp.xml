@@ -6,105 +6,69 @@
       <sentence id="1">
         <tokens>
           <token id="1">
-            <word>Karaoke</word>
+            <word>WorldNewsApp</word>
             <CharacterOffsetBegin>0</CharacterOffsetBegin>
-            <CharacterOffsetEnd>7</CharacterOffsetEnd>
+            <CharacterOffsetEnd>12</CharacterOffsetEnd>
             <POS>NNP</POS>
           </token>
           <token id="2">
-            <word>sure</word>
-            <CharacterOffsetBegin>8</CharacterOffsetBegin>
-            <CharacterOffsetEnd>12</CharacterOffsetEnd>
-            <POS>JJ</POS>
+            <word>:</word>
+            <CharacterOffsetBegin>12</CharacterOffsetBegin>
+            <CharacterOffsetEnd>13</CharacterOffsetEnd>
+            <POS>:</POS>
           </token>
           <token id="3">
-            <word>ai</word>
-            <CharacterOffsetBegin>13</CharacterOffsetBegin>
-            <CharacterOffsetEnd>15</CharacterOffsetEnd>
-            <POS>VBP</POS>
+            <word>http://t.co/hqNREtEIA9</word>
+            <CharacterOffsetBegin>14</CharacterOffsetBegin>
+            <CharacterOffsetEnd>36</CharacterOffsetEnd>
+            <POS>NN</POS>
           </token>
           <token id="4">
-            <word>n't</word>
-            <CharacterOffsetBegin>15</CharacterOffsetBegin>
-            <CharacterOffsetEnd>18</CharacterOffsetEnd>
-            <POS>RB</POS>
+            <word>Careless</word>
+            <CharacterOffsetBegin>37</CharacterOffsetBegin>
+            <CharacterOffsetEnd>45</CharacterOffsetEnd>
+            <POS>JJ</POS>
           </token>
           <token id="5">
-            <word>science</word>
-            <CharacterOffsetBegin>19</CharacterOffsetBegin>
-            <CharacterOffsetEnd>26</CharacterOffsetEnd>
+            <word>farming</word>
+            <CharacterOffsetBegin>46</CharacterOffsetBegin>
+            <CharacterOffsetEnd>53</CharacterOffsetEnd>
             <POS>NN</POS>
           </token>
           <token id="6">
-            <word>but</word>
-            <CharacterOffsetBegin>27</CharacterOffsetBegin>
-            <CharacterOffsetEnd>30</CharacterOffsetEnd>
-            <POS>CC</POS>
+            <word>`</word>
+            <CharacterOffsetBegin>54</CharacterOffsetBegin>
+            <CharacterOffsetEnd>55</CharacterOffsetEnd>
+            <POS>``</POS>
           </token>
           <token id="7">
-            <word>what</word>
-            <CharacterOffsetBegin>31</CharacterOffsetBegin>
-            <CharacterOffsetEnd>35</CharacterOffsetEnd>
-            <POS>WP</POS>
+            <word>adding</word>
+            <CharacterOffsetBegin>55</CharacterOffsetBegin>
+            <CharacterOffsetEnd>61</CharacterOffsetEnd>
+            <POS>VBG</POS>
           </token>
           <token id="8">
-            <word>a</word>
-            <CharacterOffsetBegin>36</CharacterOffsetBegin>
-            <CharacterOffsetEnd>37</CharacterOffsetEnd>
-            <POS>DT</POS>
-          </token>
-          <token id="9">
-            <word>way</word>
-            <CharacterOffsetBegin>38</CharacterOffsetBegin>
-            <CharacterOffsetEnd>41</CharacterOffsetEnd>
-            <POS>NN</POS>
-          </token>
-          <token id="10">
             <word>to</word>
-            <CharacterOffsetBegin>42</CharacterOffsetBegin>
-            <CharacterOffsetEnd>44</CharacterOffsetEnd>
+            <CharacterOffsetBegin>62</CharacterOffsetBegin>
+            <CharacterOffsetEnd>64</CharacterOffsetEnd>
             <POS>TO</POS>
           </token>
-          <token id="11">
-            <word>pass</word>
-            <CharacterOffsetBegin>45</CharacterOffsetBegin>
-            <CharacterOffsetEnd>49</CharacterOffsetEnd>
-            <POS>VB</POS>
-          </token>
-          <token id="12">
-            <word>the</word>
-            <CharacterOffsetBegin>50</CharacterOffsetBegin>
-            <CharacterOffsetEnd>53</CharacterOffsetEnd>
-            <POS>DT</POS>
-          </token>
-          <token id="13">
-            <word>last</word>
-            <CharacterOffsetBegin>54</CharacterOffsetBegin>
-            <CharacterOffsetEnd>58</CharacterOffsetEnd>
-            <POS>JJ</POS>
-          </token>
-          <token id="14">
-            <word>half</word>
-            <CharacterOffsetBegin>59</CharacterOffsetBegin>
-            <CharacterOffsetEnd>63</CharacterOffsetEnd>
-            <POS>JJ</POS>
-          </token>
-          <token id="15">
-            <word>hour</word>
-            <CharacterOffsetBegin>64</CharacterOffsetBegin>
-            <CharacterOffsetEnd>68</CharacterOffsetEnd>
-            <POS>NN</POS>
-          </token>
-          <token id="16">
-            <word>of</word>
-            <CharacterOffsetBegin>69</CharacterOffsetBegin>
+          <token id="9">
+            <word>floods</word>
+            <CharacterOffsetBegin>65</CharacterOffsetBegin>
             <CharacterOffsetEnd>71</CharacterOffsetEnd>
-            <POS>IN</POS>
+            <POS>NNS</POS>
           </token>
-          <token id="17">
-            <word>lab</word>
-            <CharacterOffsetBegin>72</CharacterOffsetBegin>
-            <CharacterOffsetEnd>75</CharacterOffsetEnd>
+          <token id="10">
+            <word>'</word>
+            <CharacterOffsetBegin>71</CharacterOffsetBegin>
+            <CharacterOffsetEnd>72</CharacterOffsetEnd>
+            <POS>POS</POS>
+          </token>
+          <token id="11">
+            <word>http://t.co/TsNrhLbKxV</word>
+            <CharacterOffsetBegin>73</CharacterOffsetBegin>
+            <CharacterOffsetEnd>95</CharacterOffsetEnd>
             <POS>NN</POS>
           </token>
         </tokens>

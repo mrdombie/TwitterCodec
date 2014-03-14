@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-import utils.ListReader;
+import utils.ModelReader;
 
 public class WordTools {
 
@@ -18,8 +18,8 @@ public class WordTools {
 		
 	private String randomizer(String location) throws IOException{
 		
-		ListReader reader = new ListReader();
-		List<String> wordList = reader.getList(location);
+		ModelReader reader = new ModelReader();
+		List<String> wordList = reader.getTemplatesAsStrings();
 		
 		Random rand = new Random(System.currentTimeMillis());
 		System.out.println(wordList.size());

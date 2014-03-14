@@ -35,6 +35,5 @@ public class TestReplaceRandomWord {
 		WordTools select = new WordTools();
 		List<String> templates = tsp.getTemplates();
 		System.out.println(tsp.replaceWithRandomNoun((templates.get(1))));
-	}
-	
+	}	
 }

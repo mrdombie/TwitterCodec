@@ -6,14 +6,14 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.junit.Test;
 
-import templates.TweetTemplate;
+import templates.TweetTemplateFactory;
 import twitter4j.TwitterException;
 
 public class TestTemplateProduction {
 
 	@Test
 	public void testCreateTemplates() throws TwitterException, InterruptedException, ParserConfigurationException, IOException{
-		TweetTemplate prod = new TweetTemplate();
+		TweetTemplateFactory prod = new TweetTemplateFactory();
 		prod.createTweetTemplates("http", 1);
 	}
 	

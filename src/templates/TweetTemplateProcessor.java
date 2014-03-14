@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import lexiconUtils.WordTools;
-import utils.ListReader;
+import utils.ModelReader;
 
 public class TweetTemplateProcessor {
 
@@ -15,8 +15,8 @@ public class TweetTemplateProcessor {
 	
 	public List<String> getTemplates() throws IOException{
 		
-		ListReader reader = new ListReader();
-		List<String> templates = reader.getList(TEMPLATELOCATION);
+		ModelReader reader = new ModelReader();
+		List<String> templates = reader.getTemplatesAsStrings();
 		logTemplateInfo(templates);		
 		return templates;
 		

@@ -15,7 +15,6 @@ public class TweetToFile {
 		
 		for (String string : templateList) {
 			FileUtils.writeStringToFile(file, "\n" + string, true);
-
 		}
 	}
 }

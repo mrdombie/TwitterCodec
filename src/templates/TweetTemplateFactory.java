@@ -13,13 +13,23 @@ import org.w3c.dom.NodeList;
 
 import twitter4j.Status;
 import twitter4j.TwitterException;
+import utils.TweetToFile;
 import utils.TweetToXML;
 import contruction.CaptureTweet;
 
-public class TweetTemplate {
+public class TweetTemplateFactory {
 	
-	private final static Logger LOGGER = Logger.getLogger(TweetTemplate.class
+	private final static Logger LOGGER = Logger.getLogger(TweetTemplateFactory.class
 			.getName());
+	
+	private int size;
+	private String topic;
+	
+	public TweetTemplateFactory(){}
+	public TweetTemplateFactory(String topic, int size){
+		this.topic = topic;
+		this.size = size;
+	}
 	
 	public List<String> createTweetTemplates(String topic, int size) throws TwitterException, InterruptedException, ParserConfigurationException, IOException{
 		
@@ -29,12 +39,15 @@ public class TweetTemplate {
 		
 		for (Status status : statuss) {	
 			String tweet = arrayToString(getTagSchema(status));
-			LOGGER.info(tweet);
 			tweets.add(arrayToString(getTagSchema(status)));
+			LOGGER.info(tweet);
 		}
 			
-		return tweets;
-		
+		return tweets;		
+	}
+	
+	public void createTemplatesExportToFile() throws TwitterException, InterruptedException, ParserConfigurationException, IOException{
+		TweetToFile.writeTweetsToTxtFile(createTweetTemplates(topic, size));
 	}
 	
 	private List<String> getTagSchema(Status status) throws ParserConfigurationException,
@@ -65,7 +78,17 @@ public class TweetTemplate {
 			if(node.getNodeName().equals("POS") && !string.equals(temp) && node.getTextContent().equals("NN")){
 				tagList.add("[NOUN]");
 				break;
-			}else if(node.getNodeName().equals("POS")) {
+			}else if(node.getNodeName().equals("POS") && !string.equals(temp) && node.getTextContent().equals("VB")){
+				tagList.add("[VERB]");
+				break;
+			}else if(node.getNodeName().equals("POS") && !string.equals(temp) && node.getTextContent().equals("VBD")){
+				tagList.add("[VERBPASTENCE]");
+				break;
+			}else if(node.getNodeName().equals("POS") && !string.equals(temp) && node.getTextContent().equals("JJ")){
+				tagList.add("[ADJECTIVE]");
+				break;
+			}
+			else if(node.getNodeName().equals("POS")) {
 				tagList.add(temp);
 				break;
 			}
@@ -91,7 +114,6 @@ public class TweetTemplate {
 			builder.append(string + " ");
 		}
 		
-		return builder.toString();
-		
+		return builder.toString();	
 	}
 }

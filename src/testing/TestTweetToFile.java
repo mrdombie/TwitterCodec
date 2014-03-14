@@ -7,7 +7,7 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.junit.Test;
 
-import templates.TweetTemplate;
+import templates.TweetTemplateFactory;
 import twitter4j.TwitterException;
 import utils.TweetToFile;
 
@@ -17,9 +17,9 @@ public class TestTweetToFile {
 	public void testWriteTweets() throws ParserConfigurationException, TwitterException, InterruptedException, IOException{
 		
 		TweetToFile ttf = new TweetToFile();
-		TweetTemplate tweep = new TweetTemplate();
+		TweetTemplateFactory tweep = new TweetTemplateFactory();
 		
-		List<String> list = tweep.createTweetTemplates("science", 5); 
+		List<String> list = tweep.createTweetTemplates("science", 50); 
 		ttf.writeTweetsToTxtFile(list);
 		
 	}
