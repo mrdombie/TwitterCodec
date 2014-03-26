@@ -7,7 +7,7 @@ public enum WordTags {
 	SENSE("[SENSE]"),
 	HASHTAG("[HASHTAG]"),
 	VERBPASTENCE("[VERBPASTENCE]"),
-	ADJECTIVE("ADJECTIVE");
+	ADJECTIVE("[ADJECTIVE]");
 	
 	private WordTags(final String text){
 		this.text = text;

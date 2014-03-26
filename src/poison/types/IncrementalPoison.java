@@ -33,6 +33,5 @@ public class IncrementalPoison implements Poison{
 	@Override
 	public void applyPoison(AngelOfDeath deathAngel, String poisonWord) {
 		incrementalPoison(poisonWord, deathAngel.getTemplates());
-	}
-	
+	}	
 }

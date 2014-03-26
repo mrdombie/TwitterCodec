@@ -3,8 +3,11 @@ package poison.utils;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.EnumSet;
 import java.util.List;
 import java.util.Random;
+
+import lexiconUtils.WordType;
 
 import org.apache.commons.io.FileUtils;
 
@@ -18,9 +21,20 @@ public class AngelOfDeath {
 	protected List<String> dataToInsert;
 	protected List<TweetTemplate> templates;
 	protected List<Poison> poisons;
+	protected List<Poison> poisonsUsed;
+	protected List<TweetTemplate> poisonedTweets;
 	
-	public AngelOfDeath(){}
+	public List<TweetTemplate> getPoisonedTweets() {
+		return poisonedTweets;
+	}
 
+	public void setPoisonedTweets(List<TweetTemplate> poisonedTweets) {
+		this.poisonedTweets = poisonedTweets;
+	}
+
+
+	public AngelOfDeath(){}
+	
 	private AngelOfDeath(List<String> dataToInsert) {
 		this.dataToInsert = dataToInsert;
 	}
@@ -62,15 +76,24 @@ public class AngelOfDeath {
 			template.setBody(string);
 			tweetTemplates.add(template);
 		}	
+		templates = tweetTemplates;
 		return this;
 	}
 	
-	private int templateSize(){
-		return templates.size();
-	}
-	
+	public void cleanTheScene() throws IOException{
+		for (TweetTemplate template : templates) {
+			for (WordType tags : EnumSet.allOf(WordType.class)) {
+				if(template.getBody().contains(tags.toString())){
+					template.setBody(tags.replace(template.getBody()));
+				}
+			}
+		}
+	};
+		
 	public int randomTemplateIndex(){
-		return new Random(templateSize()).nextInt();
+		Random rand  =  new Random();
+		int myInt = rand.nextInt(templates.size());
+		return myInt;
 	}
 	
 	public TweetTemplate getRandomTemplate(){
@@ -78,13 +101,16 @@ public class AngelOfDeath {
 	}
 	
 	@Loggable(Loggable.INFO)
-	public void poison(){
-		try {
-			Injector.inject(new AngelOfDeath(dataToInsert, templates, poisons));
-		} catch (Exception e) {
-			System.out.println(e);
+	public void poison() throws Exception {
+		poisonedTweets = (Injector.inject(new AngelOfDeath(dataToInsert, templates, poisons)));
+	}
+	
+	public void outPutCompleteInfectedList() throws Exception{
+		List<TweetTemplate> combinedList = new ArrayList<TweetTemplate>(poisonedTweets);
+		combinedList.addAll(templates);
+		for (TweetTemplate tweetTemplate : combinedList) {
+			System.out.println(tweetTemplate.getBody());
 		}
-		
 	}
 
 	public List<String> getDataToInsert() {

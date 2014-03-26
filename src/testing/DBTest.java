@@ -3,7 +3,7 @@ package testing;
 import java.io.IOException;
 import java.sql.SQLException;
 
-import lexiconUtils.WordTools;
+import lexiconUtils.WordType;
 import storage.Profiles;
 import storage.Tweets;
 import twitter4j.TwitterException;

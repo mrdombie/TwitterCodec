@@ -17,9 +17,9 @@ public class TenseConverter {
 		Realiser realiser = new Realiser(lexicon);
 		p.setVerb(verb);
 		p.setFeature(feature, tense);
-		String word = realiser.realiseSentence(p);
-		
+		String word = realiser.realiseSentence(p);	
 		return word;
+		
 	}
 	
 	public String setFuturetence(String verb){

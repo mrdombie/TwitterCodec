@@ -14,7 +14,7 @@ public class QRPoison implements Poison{
 	}
 	
 	public void qrPoison(AngelOfDeath deathAngel){
-		QRCode.from(template.getBody()).to(ImageType.PNG).file();
+		//QRCode.from(template.getBody()).to(ImageType.PNG).file();
 	}
 
 }

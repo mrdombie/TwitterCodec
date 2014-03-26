@@ -12,11 +12,9 @@ import template.models.TweetTemplate;
 public class HexPoison implements Poison {
 
 	public AngelOfDeath hexPoison(AngelOfDeath deathAngel, String word) {
-		
 		byte[] hexAsBytes = DatatypeConverter.parseHexBinary(deathAngel.getRandomTemplate().getBody());
 		String output = DatatypeConverter.printHexBinary(hexAsBytes);
 		return deathAngel;
-		
 	}
 
 	@Override

@@ -11,6 +11,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import template.models.TweetTemplate;
 import twitter4j.Status;
 import twitter4j.TwitterException;
 import utils.TweetToFile;
@@ -44,6 +45,18 @@ public class TweetTemplateFactory {
 		}
 			
 		return tweets;		
+	}
+	
+	public List<TweetTemplate> createTweetTemplates() throws TwitterException, InterruptedException, ParserConfigurationException, IOException{
+		
+		List<String> tweetsTemplates = createTweetTemplates(topic, size);;
+		List<TweetTemplate> templates = new ArrayList<TweetTemplate>();
+		for (String string : tweetsTemplates) {
+			TweetTemplate template = new TweetTemplate();
+			template.setBody(string);
+			templates.add(template);
+		}
+		return templates;
 	}
 	
 	public void createTemplatesExportToFile() throws TwitterException, InterruptedException, ParserConfigurationException, IOException{

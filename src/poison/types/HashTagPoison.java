@@ -1,13 +1,13 @@
 package poison.types;
 
-import lexiconUtils.WordTools;
+import lexiconUtils.WordType;
 import template.models.TweetTemplate;
 
 public class HashTagPoison {
 
 	public String poisonAsHashTag(String poisonWord, TweetTemplate template) {
 
-		WordTools tools = new WordTools();
+		WordType tools = new WordType();
 		StringBuilder builder = new StringBuilder();
 		builder.append(template + " " + tools.generateHashTag(poisonWord));
 		return builder.toString();

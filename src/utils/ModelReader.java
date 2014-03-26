@@ -20,7 +20,7 @@ public class ModelReader {
 	private static final String POISONDATALOCATION = "D:\\Programming\\Projects\\TwitterCodec\\poisons\\poisondata.txt";
 	
 	public static List<String> getTemplatesAsStrings(String location) throws IOException {
-		File file = new File(LOCATION);
+		File file = new File(location);
 		List<String> wordList = FileUtils.readLines(file, "UTF-8");
 		return wordList;
 	}

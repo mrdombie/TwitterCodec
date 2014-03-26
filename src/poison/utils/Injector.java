@@ -1,41 +1,67 @@
 package poison.utils;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
-import java.util.Random;
 
-import com.jcabi.aspects.Loggable;
-
-import constants.WordTags;
+import lexiconUtils.WordType;
 import poison.interfaces.Poison;
 import template.models.TweetTemplate;
+
+import com.jcabi.aspects.Loggable;
 
 public class Injector {
 	
 	@Loggable(Loggable.INFO)
-	public static void inject(AngelOfDeath deathAngel) {
+	public static List<TweetTemplate> inject(AngelOfDeath deathAngel) {
 		
+		List<TweetTemplate> templates = new ArrayList<TweetTemplate>();
 		List<String> dataToInsert = deathAngel.getDataToInsert();
-		int dataSize = deathAngel.getDataToInsert().size();
-;		int poisonSize = deathAngel.getPoisons().size();
 		List<Poison> poisons = deathAngel.getPoisons();
 		
-		Random rand = new Random();
+		int dataSize = deathAngel.getDataToInsert().size();
+		int poisonSize = deathAngel.getPoisons().size();
+		int index = 0;
 		
-		for (int i = 0; i < dataSize; i++) {
-			int theRand = rand.nextInt(poisonSize);
-			System.out.println(theRand);
-			poisons.get(theRand).applyPoison(deathAngel, dataToInsert.get(i));
+		try {
+			for (int i = 0; i < dataSize; i++) {		
+				TweetTemplate template = poisons.get(index).applyPoison(deathAngel, dataToInsert.get(i));	
+				index++;
+				if(index == poisonSize){
+					index = 0;
+				}
+				templates.add(template);
+			}
+		} catch (Exception e) {
+			System.out.println(e);
 		}
+		return templates;
 	}
 	
 	@Loggable(Loggable.INFO)
 	public static void injectKeyWord(String keyword, TweetTemplate template){
-		for (WordTags tag : EnumSet.allOf(WordTags.class)) {
+		for (WordType tag : EnumSet.allOf(WordType.class)) {
 			if(template.getBody().contains(tag.toString())){
 				template.getBody().replace(tag.toString(), keyword);
 			}
 		}	
+	}
+	
+	public static List<TweetTemplate> generateCleanTweetList(List<TweetTemplate> templates) throws IOException{
+		for (TweetTemplate tweetTemplate : templates) {
+			generateCleanSingleTweet(tweetTemplate);
+		}
+		return templates;
+	}
+	
+	public static TweetTemplate generateCleanSingleTweet(TweetTemplate template) throws IOException{
+		for (WordType tag : EnumSet.allOf(WordType.class)) {
+			if(template.getBody().contains(tag.toString())){
+				template.getBody().replace(tag.toString(), tag.selectRandom());
+			}
+		}
+		return template;	
 	}
 }
 
