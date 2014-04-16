@@ -3,11 +3,9 @@ package watermark.morcecode;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.EnumSet;
-import java.util.List;
 
 import lexiconUtils.WordTools;
 import poison.enums.PoisonEnum;
-import poison.types.HexPoison;
 import template.models.TweetTemplate;
 import watermarker.WatermarkHelper;
 
@@ -94,9 +92,7 @@ public class Encrypter extends WatermarkHelper{
 		template.setBody("BLAH BLAH BLAH #TWEET BLAH #TWEET BLAH BLAH");
 		
 		Encrypter enc = new Encrypter(template);
-		enc.checkAndFix(HexPoison.class);
 		
-	}
-	
+	}	
 }
 

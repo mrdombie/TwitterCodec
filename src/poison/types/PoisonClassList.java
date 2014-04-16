@@ -16,17 +16,13 @@ public class PoisonClassList {
 		try {
 			poisonClasses = new ArrayList<Class<?>>();
 			poisonClasses.add(Base64Poison.class);
-/*			poisonClasses.add(HashTagPoison.class);
-			poisonClasses.add(HexPoison.class);
-			poisonClasses.add(IncrementalPoison.class);
-			poisonClasses.add(QRPoison.class);
-*/		} catch (Exception e) {
+			poisonClasses.add(NewPoisonType.class);
+		} catch (Exception e) {
 			System.out.println(e);
 		}
-
 	}
 	
-	public void addClass(Class<Base64Poison> clazz){
+	public void addClass(Class<?> clazz){
 		poisonClasses.add(clazz);
 	}
 

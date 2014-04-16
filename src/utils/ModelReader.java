@@ -9,13 +9,10 @@ import java.util.logging.Logger;
 import org.apache.commons.io.FileUtils;
 
 import template.models.TweetTemplate;
-import contruction.CaptureTweet;
+import contruction.TweetGrabber;
 
 public class ModelReader {
-	
-	private final static Logger LOGGER = Logger.getLogger(CaptureTweet.class
-			.getName());
-	
+		
 	private static final String LOCATION = "D:\\Programming\\Projects\\TwitterCodec\\output\\template.txt";
 	private static final String POISONDATALOCATION = "D:\\Programming\\Projects\\TwitterCodec\\poisons\\poisondata.txt";
 	

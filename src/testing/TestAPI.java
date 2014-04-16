@@ -3,10 +3,10 @@ package testing;
 import java.util.ArrayList;
 import java.util.List;
 
+import file.helper.FileHandler;
 import poison.interfaces.Poison;
 import poison.types.Base64Poison;
-import poison.types.HexPoison;
-import poison.types.IncrementalPoison;
+import poison.types.PoisonClassList;
 import poison.utils.AngelOfDeath;
 import template.models.TweetTemplate;
 import utils.ModelReader;
@@ -18,7 +18,7 @@ public class TestAPI {
 	
 	public static void main(String[] args) throws Exception {
 		
-		List<Poison> poisons = new ArrayList<Poison>();
+	/*	List<Poison> poisons = new ArrayList<Poison>();
 		poisons.add(new Base64Poison());		
 	
 		AngelOfDeath deathAngel = new AngelOfDeath();
@@ -26,15 +26,17 @@ public class TestAPI {
 		deathAngel.usingTheFollowingPoisons(poisons);
 		deathAngel.templates(ModelReader.getTemplates());
 		deathAngel.poison();
-		
+		deathAngel.cleanTheScene();
+		deathAngel.getFinalTweetList();
+	
 		List<TweetTemplate> template = deathAngel.getPoisonedTweets();
 		
 		for (TweetTemplate tweetTemplate : template) {
 			System.out.println(tweetTemplate.getBody());
-		}
+		}*/
 		
-		Decrypter crypt = new Decrypter(deathAngel);
-		crypt.decrypt();
-		
+		PoisonClassList poison = new PoisonClassList();
+		List<Class<?>> poisonss = poison.getPoisonClasses();
+				
 	}
 }

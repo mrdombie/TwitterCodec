@@ -16,17 +16,15 @@ import twitter4j.Status;
 import twitter4j.TwitterException;
 import utils.TweetToFile;
 import utils.TweetToXML;
-import contruction.CaptureTweet;
+import contruction.TweetGrabber;
 
 public class TweetTemplateFactory {
-	
-	private final static Logger LOGGER = Logger.getLogger(TweetTemplateFactory.class
-			.getName());
-	
+		
 	private int size;
 	private String topic;
 	
 	public TweetTemplateFactory(){}
+	
 	public TweetTemplateFactory(String topic, int size){
 		this.topic = topic;
 		this.size = size;
@@ -35,13 +33,12 @@ public class TweetTemplateFactory {
 	public List<String> createTweetTemplates(String topic, int size) throws TwitterException, InterruptedException, ParserConfigurationException, IOException{
 		
 		List<String> tweets = new ArrayList<String>();
-		CaptureTweet captureTweet = new CaptureTweet();
+		TweetGrabber captureTweet = new TweetGrabber();
 		List<Status> statuss = captureTweet.getTweetsByTopic(topic, size);
 		
 		for (Status status : statuss) {	
 			String tweet = arrayToString(getTagSchema(status));
 			tweets.add(arrayToString(getTagSchema(status)));
-			LOGGER.info(tweet);
 		}
 			
 		return tweets;		
@@ -54,6 +51,7 @@ public class TweetTemplateFactory {
 		for (String string : tweetsTemplates) {
 			TweetTemplate template = new TweetTemplate();
 			template.setBody(string);
+			System.out.println("TEMPLATE CREATED: " + template.getBody());
 			templates.add(template);
 		}
 		return templates;

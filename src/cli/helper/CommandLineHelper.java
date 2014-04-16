@@ -19,11 +19,8 @@ public class CommandLineHelper {
   private Class<?> targetClass = null;
   private Options cmdLineOptions = null;
   private Set<String> requiredOptions = new HashSet<String>();
-  private HashMap<String, Class<?>> typeMap
-      = new HashMap<String, Class<?>>();
+  private HashMap<String, Class<?>> typeMap = new HashMap<String, Class<?>>();
   private HashMap<String, Object> parsedArgs = new HashMap<String, Object>();
-
-
   private CommandLine parsedCmdLine = null;
 
   public CommandLineHelper(Class<?> thisClass) throws Exception {

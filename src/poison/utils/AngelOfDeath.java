@@ -32,7 +32,6 @@ public class AngelOfDeath {
 		this.poisonedTweets = poisonedTweets;
 	}
 
-
 	public AngelOfDeath(){}
 	
 	private AngelOfDeath(List<String> dataToInsert) {
@@ -95,21 +94,19 @@ public class AngelOfDeath {
 		int myInt = rand.nextInt(templates.size());
 		return myInt;
 	}
-	
-	public TweetTemplate getRandomTemplate(){
-		return templates.get(randomTemplateIndex());
-	}
-	
+		
 	@Loggable(Loggable.INFO)
 	public void poison() throws Exception {
 		poisonedTweets = (Injector.inject(new AngelOfDeath(dataToInsert, templates, poisons)));
 	}
 	
-	public void outPutCompleteInfectedList() throws Exception{
-		List<TweetTemplate> combinedList = new ArrayList<TweetTemplate>(poisonedTweets);
-		combinedList.addAll(templates);
-		for (TweetTemplate tweetTemplate : combinedList) {
-			System.out.println(tweetTemplate.getBody());
+	public  List<TweetTemplate> getFinalTweetList() throws Exception{	
+		if(poisonedTweets != null){
+			List<TweetTemplate> combinedList = new ArrayList<TweetTemplate>(poisonedTweets);
+			combinedList.addAll(templates);
+			return combinedList;
+		}else{
+			return templates;
 		}
 	}
 

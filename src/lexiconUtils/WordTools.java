@@ -20,9 +20,7 @@ public class WordTools {
 		ModelReader reader = new ModelReader();
 		List<String> wordList = reader.getTemplatesAsStrings(location);
 		Random rand = new Random(System.currentTimeMillis());
-		System.out.println(wordList.size());
 		String randomWord = wordList.get(rand.nextInt(wordList.size()));
-		System.out.println(randomWord);
 		return randomWord;
 		
 	}
@@ -35,7 +33,6 @@ public class WordTools {
 				splitArray[i] = tags.selectRandom();
 			}
 		}
-		System.out.println(arrayToString(splitArray));
 		return arrayToString(splitArray);
 	}
 	
@@ -56,11 +53,7 @@ public class WordTools {
 		
 		return builder.toString();
 	}
-	
-	public static void main(String[] args) {
-		replaceWithFakeURL();
-	}
-	
+		
 	private static String[] splitString(String templateString){	
 		String[] splitArray = templateString.split("\\s+");
 		return splitArray;
@@ -71,8 +64,10 @@ public class WordTools {
 		StringBuilder builder = new StringBuilder();
 		for (String value : splitArray) {
 		    builder.append(value + " ");
-		}	
+		}
+		
 		return builder.toString();
+		
 	}
 	
 	public static String selectRandomNoun() throws IOException{

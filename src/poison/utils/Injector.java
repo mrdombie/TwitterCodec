@@ -40,12 +40,16 @@ public class Injector {
 	}
 	
 	@Loggable(Loggable.INFO)
-	public static void injectKeyWord(String keyword, TweetTemplate template){
-		for (WordType tag : EnumSet.allOf(WordType.class)) {
-			if(template.getBody().contains(tag.toString())){
-				template.getBody().replace(tag.toString(), keyword);
+	public static TweetTemplate injectKeyWord(String keyword, TweetTemplate template){
+		outerloop: {
+			for (WordType tag : EnumSet.allOf(WordType.class)) {
+					if(template.getBody().contains(tag.toString())){
+						template.setBody(template.getBody().replaceFirst(tag.toString(), keyword));
+						break outerloop;
+					}
+				}
 			}
-		}	
+		return template;
 	}
 	
 	public static List<TweetTemplate> generateCleanTweetList(List<TweetTemplate> templates) throws IOException{

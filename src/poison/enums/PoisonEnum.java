@@ -4,7 +4,7 @@ public enum PoisonEnum {
 
 	BAS(1),
 	HAS(2),
-	HEX(3),
+	NEW(3),
 	INC(4),
 	QRP(5);
 	
